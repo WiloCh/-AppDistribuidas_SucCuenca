@@ -12,7 +12,7 @@ class CM extends CI_Controller {
 	}
 	public function listarEmpleados()
 	{
-		$url = 'https://https://succuenca.herokuapp.com/api/empleado';
+		$url = 'https://succuenca.herokuapp.com/api/empleado';
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -37,7 +37,7 @@ class CM extends CI_Controller {
 			"fecha_ent_emp" => $fecha_ent_emp
 		);
 
-		$url = 'https://https://succuenca.herokuapp.com/api/empleado';
+		$url = 'https://succuenca.herokuapp.com/api/empleado';
 		
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
@@ -63,7 +63,7 @@ class CM extends CI_Controller {
 			"salario_emp" => $salario_emp,
 			"fecha_ent_emp" => $fecha_ent_emp
 		);
-		$url = 'https://https://succuenca.herokuapp.com/api/empleado/'.$cod_emp;
+		$url = 'https://succuenca.herokuapp.com/api/empleado/'.$cod_emp;
 		$ch = curl_init($url);
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -78,13 +78,13 @@ class CM extends CI_Controller {
 	}
 	public function listarMedicos()
 	{
-		$url = 'https://https://succuenca.herokuapp.com/api/empleado';
+		$url = 'https://succuenca.herokuapp.com/api/empleado';
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		$empleados = json_decode(curl_exec($ch));
 		curl_close($ch);
-		$url1 = 'https://https://succuenca.herokuapp.com/api/medico';
+		$url1 = 'https://succuenca.herokuapp.com/api/medico';
 		$ch1 = curl_init();
 		curl_setopt($ch1, CURLOPT_URL, $url1);
 		curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
@@ -108,7 +108,7 @@ class CM extends CI_Controller {
 			"exp_med" => $exp_med
 		);
 
-		$url = 'https://https://succuenca.herokuapp.com/api/medico';
+		$url = 'https://succuenca.herokuapp.com/api/medico';
 		
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
@@ -132,7 +132,7 @@ class CM extends CI_Controller {
 			"func_med" => $func_med,
 			"exp_med" => $exp_med
 		);
-		$url = 'https://https://succuenca.herokuapp.com/api/medico/'.$cod_med;
+		$url = 'https://succuenca.herokuapp.com/api/medico/'.$cod_med;
 		$ch = curl_init($url);
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -148,7 +148,7 @@ class CM extends CI_Controller {
 	public function eliminarMedico(){
 		$cod_med = $_GET['cod_med'];
 
-		$url = 'https://https://succuenca.herokuapp.com/api/medico/'.$cod_med;
+		$url = 'https://succuenca.herokuapp.com/api/medico/'.$cod_med;
 		$ch = curl_init($url);
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -159,19 +159,19 @@ class CM extends CI_Controller {
 	}
 	public function listarConsultas()
 	{
-		$url = 'https://https://succuenca.herokuapp.com/api/empleado';
+		$url = 'https://succuenca.herokuapp.com/api/empleado';
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		$empleados = json_decode(curl_exec($ch));
 		curl_close($ch);
-		$url1 = 'https://https://succuenca.herokuapp.com/api/consultas';
+		$url1 = 'https://succuenca.herokuapp.com/api/consultas';
 		$ch1 = curl_init();
 		curl_setopt($ch1, CURLOPT_URL, $url1);
 		curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
 		$consultas = json_decode(curl_exec($ch1));
 		curl_close($ch1);
-		$url2 = 'https://https://succuenca.herokuapp.com/api/especialidad';
+		$url2 = 'https://succuenca.herokuapp.com/api/especialidad';
 		$ch2 = curl_init();
 		curl_setopt($ch2, CURLOPT_URL, $url2);
 		curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
@@ -200,7 +200,7 @@ class CM extends CI_Controller {
 			"paciente_con" => $paciente_con 
 		);
 
-		$url = 'https://https://succuenca.herokuapp.com/api/consultas';
+		$url = 'https://succuenca.herokuapp.com/api/consultas';
 		
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
@@ -229,7 +229,7 @@ class CM extends CI_Controller {
 			"hora_con" => $hora_con,
 			"paciente_con" => $paciente_con 
 		);
-		$url = 'https://https://succuenca.herokuapp.com/api/consultas/'.$cod_con;
+		$url = 'https://succuenca.herokuapp.com/api/consultas/'.$cod_con;
 		$ch = curl_init($url);
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -245,7 +245,7 @@ class CM extends CI_Controller {
 	public function eliminarConsulta(){
 		$cod_con = $_GET['cod_con'];
 
-		$url = 'https://https://succuenca.herokuapp.com/api/consultas/'.$cod_con;
+		$url = 'https://succuenca.herokuapp.com/api/consultas/'.$cod_con;
 		$ch = curl_init($url);
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -255,7 +255,7 @@ class CM extends CI_Controller {
 		header("Location: http://localhost/CitasMedicas_Cuenca/consultas");
 	}
 	public function listarEspecialidades(){
-		$url = 'https://https://succuenca.herokuapp.com/api/especialidad';
+		$url = 'https://succuenca.herokuapp.com/api/especialidad';
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
